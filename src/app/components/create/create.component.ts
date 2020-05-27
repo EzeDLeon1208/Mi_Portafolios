@@ -11,7 +11,8 @@ import { Global } from '../../services/global';
   providers: [ProjectService, UploadService]
 })
 export class CreateComponent implements OnInit {
-
+	
+	public url: string;
 	public title: string;
 	public project: Project;
 	public save_project;
@@ -24,6 +25,7 @@ export class CreateComponent implements OnInit {
 	){
 		this.title = "Crear proyecto";
 		this.project = new Project('','','','',2019,'','');
+		this.url = Global.url;
 	}
 
 	ngOnInit() {

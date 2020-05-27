@@ -18,7 +18,6 @@ export class EditComponent implements OnInit {
 	public save_project;
 	public status: string;
 	public filesToUpload: Array<File>;
-	public url: string;
 
 	constructor(
 		private _projectService: ProjectService,
@@ -27,7 +26,6 @@ export class EditComponent implements OnInit {
 		private _router: Router
 	){
 		this.title = "Editar proyecto";
-		this.url = Global.url;
 	}
 
   ngOnInit(){
